@@ -137,15 +137,10 @@ mongoose
 
         // IMPORTANT:
         // server.listen(), NOT app.listen()
-
-        server.listen(
-            process.env.PORT,
-            () => {
-                console.log(
-                    `🚀 Server started on port ${process.env.PORT}`
-                );
-            }
-        );
+        let PORT = process.env.PORT || 8000;
+        server.listen(PORT, "0.0.0.0", () => {
+            console.log(`Server running on port ${PORT}`);
+        });
 
     })
     .catch((error) => {
