@@ -126,7 +126,7 @@ export default function page() {
                         });
                         setLoader(false)
                         setTimeout(() => {
-                            // router.push('/admin/pages/own-property/view-property')
+                           router.push('/admin/pages/own-property/view-property')
                         }, 500);
 
                     }

@@ -67,14 +67,7 @@ export default function Deatails({
       dispatch(setActiveChat(updatedChat))
       router.push(`/pages/message?chatId=${updatedChat._id}`);
     } catch (error) {
-      alert(
-        error.response?.data?.message ||
-        "Failed to start chat"
-      );
-      console.error(
-        "Start chat error:",
-        error
-      );
+       console.log("Failed to start chat",error)
     }
   };
 
