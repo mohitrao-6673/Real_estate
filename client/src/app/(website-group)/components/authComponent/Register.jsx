@@ -55,6 +55,7 @@ export default function Register({ setUserData, setOTPafterSignUp, setDivOpen, u
 
                     setStatus(finalRes.status)
                     setError(finalRes.message)
+                    console.log(finalRes.message)
                 }
                 setLoader(false)
             })
