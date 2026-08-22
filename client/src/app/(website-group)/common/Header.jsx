@@ -33,87 +33,6 @@ export default function Header() {
   }, []);
 
 
-  let navLinks = (
-    <>
-
-      {/* if user  admin */}
-      {(userData && userData.role == 'admin') && (
-        <>
-          <Link href={'/'} onClick={() => setNavopen(false)} className='nav-title ' >
-            <span className="nav-slide"></span>
-            home
-          </Link>
-          <Link href={'/pages/properties'} onClick={() => setNavopen(false)} className='nav-title ' >
-            <span className="nav-slide "></span>
-            Properties
-          </Link>
-          <Link href={'/admin/pages/overview'} onClick={() => setNavopen(false)} className='nav-title ' >
-            <span className="nav-slide  "></span>
-            Admin Panel
-          </Link>
-        </>
-      )}
-
-      {/* if user seller */}
-      {(userData && userData.role == 'seller') && (
-        <>
-          <Link href={'/'} onClick={() => setNavopen(false)} className='nav-title ' >
-            <span className="nav-slide"></span>
-            home
-          </Link>
-          <Link href={'/pages/properties'} onClick={() => setNavopen(false)} className='nav-title ' >
-            <span className="nav-slide "></span>
-            Properties
-          </Link>
-          <Link href={'/saler/pages/dashboard'} onClick={() => setNavopen(false)} className='nav-title ' >
-            <span className="nav-slide  "></span>
-            Dashboard
-          </Link>
-        </>
-      )}
-
-      {/* if user not login */}
-      {(!userData) && (
-        <>
-          <Link href={'/'} onClick={() => setNavopen(false)} className='nav-title ' >
-            <span className="nav-slide"></span>
-            home
-          </Link>
-          <Link href={'/pages/properties'} onClick={() => setNavopen(false)} className='nav-title ' >
-            <span className="nav-slide"></span>
-            Properties
-          </Link>
-        </>
-      )}
-
-
-      {/* for buyer */}
-      {(userData && userData.role == 'buyer') && (
-        <>
-          <Link href={'/'} onClick={() => setNavopen(false)} className='nav-title ' >
-            <span className="nav-slide"></span>
-            home
-          </Link>
-          <Link href={'/pages/properties'} onClick={() => setNavopen(false)} className='nav-title ' >
-            <span className="nav-slide"></span>
-            Properties
-          </Link>
-          <Link href={'/pages/message'} onClick={() => setNavopen(false)} className='nav-title '>
-            <span className="nav-slide"></span>
-            Message
-          </Link>
-          <Link href={'/pages/contact-us'} onClick={() => setNavopen(false)} className='nav-title '>
-            <span className="nav-slide"></span>
-            Contact Us
-          </Link>
-          <Link href={'/pages/wishlist'} onClick={() => setNavopen(false)} className='nav-title '>
-            <span className="nav-slide"></span>
-            Wishlist
-          </Link>
-        </>
-      )}
-    </>
-  )
 
 
 
@@ -149,7 +68,30 @@ export default function Header() {
           {/* navigation */}
           <div className='  '  >
             <div className={'flex sm:flex-row flex-col md:gap-5 gap-2 sm:items-center '} >
-              {navLinks}
+                <Link href={'/'} onClick={() => setNavopen(false)} className='nav-title ' >
+                    <span className="nav-slide"></span>
+                  home
+                   </Link>
+                      <Link href={'/pages/properties'} onClick={() => setNavopen(false)} className='nav-title ' >
+                   <span className="nav-slide"></span>
+                       Properties
+                    </Link>
+                      <Link href={'/pages/message'} onClick={() => setNavopen(false)} className='nav-title '>
+                     <span className="nav-slide"></span>
+                       Message
+                  </Link>
+                    <Link href={'/pages/contact-us'} onClick={() => setNavopen(false)} className='nav-title '>
+               <span className="nav-slide"></span>
+                   Contact Us
+                    </Link>
+                    <Link href={'/admin/pages/overview'} onClick={() => setNavopen(false)}    className='nav-title ' >
+                          <span className="nav-slide  "></span>
+                    Admin Panel
+                      </Link>
+                     <Link href={'/saler/pages/dashboard'} onClick={() => setNavopen(false)} className='nav-title ' >
+                 <span className="nav-slide  "></span>
+                     Dashboard
+                  </Link>
             </div>
           </div>
 
@@ -253,7 +195,31 @@ export default function Header() {
             {/* navigation */}
             <div className=' '  >
               <div className={'flex flex-col md:gap-5 gap-2 text-white '} >
-                {navLinks}
+               
+                <Link href={'/'} onClick={() => setNavopen(false)} className='nav-title ' >
+                    <span className="nav-slide"></span>
+                  home
+                   </Link>
+                      <Link href={'/pages/properties'} onClick={() => setNavopen(false)} className='nav-title ' >
+                   <span className="nav-slide"></span>
+                       Properties
+                    </Link>
+                      <Link href={'/pages/message'} onClick={() => setNavopen(false)} className='nav-title '>
+                     <span className="nav-slide"></span>
+                       Message
+                  </Link>
+                    <Link href={'/pages/contact-us'} onClick={() => setNavopen(false)} className='nav-title '>
+               <span className="nav-slide"></span>
+                   Contact Us
+                    </Link>
+                    <Link href={'/admin/pages/overview'} onClick={() => setNavopen(false)}    className='nav-title ' >
+                          <span className="nav-slide  "></span>
+                    Admin Panel
+                      </Link>
+                     <Link href={'/saler/pages/dashboard'} onClick={() => setNavopen(false)} className='nav-title ' >
+                 <span className="nav-slide  "></span>
+                     Dashboard
+                  </Link>
               </div>
             </div>
 
